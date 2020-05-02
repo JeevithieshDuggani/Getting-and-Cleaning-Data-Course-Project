@@ -25,11 +25,6 @@ featurelabels  <- read.table("UCI HAR Dataset/features.txt", col.names = c("id",
 ##  Identify and save the features about means and standard deviations
 featurelabels  <- featurelabels[grep(".*mean.*|.*std.*", featurelabels$feature),]
 
-##  Convert the labels into a more readable format
-featurelabels$feature  <- gsub( "mean", "Mean", featurelabels$feature)
-featurelabels$feature  <- gsub(  "std",  "Std", featurelabels$feature)
-featurelabels$feature  <- gsub("[-()]",     "", featurelabels$feature)
-
 ##  Load the training datasets
 train_set     <- read.table("UCI HAR Dataset/train/X_train.txt")[featurelabels$id]
 train_label   <- read.table("UCI HAR Dataset/train/y_train.txt")
