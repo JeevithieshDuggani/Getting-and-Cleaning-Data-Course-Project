@@ -2,8 +2,10 @@
 
 ##  Identifiers
 `subject`   - The ID of the test subject
+
             * `(1-30) - RANGE`
 `activity`  - The activity being performed at the time of measurement
+
             * `1` - `WALKING`
             * `2` - `WALKING_UPSTAIRS`
             * `3` - `WALKING_DOWNSTAIRS`
